@@ -1,7 +1,6 @@
 import log from 'fancy-log'
 import chalk from 'chalk'
 import PluginError from 'plugin-error'
-import prettifyTime from './prettify-time'
 import handleErrors from './handle-errors'
 
 module.exports = (err, stats) => {
