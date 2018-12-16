@@ -1,0 +1,19 @@
+.l-support {
+    &__columns {
+        @extend %display-flex;
+        @extend %align-items-flex-end;
+        @extend %justify-content-flex-start;
+
+        &__col {
+            &--content {
+                flex-shrink: 0;
+                width: 380px;
+            }
+
+            &--carousel {
+                flex-grow: 1;
+                margin-left: 90px;
+            }
+        }
+    }
+}

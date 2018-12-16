@@ -1,0 +1,30 @@
+.c-logo {
+    display: block;
+
+    text-indent: -777em;
+    background-size: cover;
+}
+
+.c-logo {
+    &--main {
+        width: 257px;
+        height: 45px;
+        background-image: url("../img/default/logo-main.png");
+    }
+}
+
+.c-logo {
+    &--alt {
+        width: 199px;
+        height: 199px;
+        background-image: url("../img/default/logo-alt.png");
+    }
+}
+
+.c-logo {
+    &--primary {
+        width: 257px;
+        height: 205px;
+        background-image: url("../img/default/logo-primary.png");
+    }
+}

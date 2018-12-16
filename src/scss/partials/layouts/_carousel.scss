@@ -1,0 +1,40 @@
+
+.l-carousel {
+    position: relative;
+}
+
+.l-carousel {
+    &--default {
+        width: 583px;
+        height: 240px;
+
+        padding: 0 40px;
+
+        background: url("../img/default/bg-carousel-border.png") no-repeat;
+        background-size: cover;
+
+        .l-carousel__item {
+            @extend %display-flex;
+            @extend %align-items-center;
+            @extend %justify-content-center;
+
+            height: 240px;
+        }
+
+        .l-carousel__next,
+        .l-carousel__prev {
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+        }
+
+        .l-carousel__prev {
+            left: -20px;
+        }
+
+        .l-carousel__next {
+            right: -20px;
+        }
+    }
+}

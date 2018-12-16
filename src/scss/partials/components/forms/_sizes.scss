@@ -1,0 +1,13 @@
+
+.f-sw1 {
+    width: 560px;
+
+    @include media("<=l") {
+        width: 400px;
+    }
+
+    @include media("<=m") {
+        width: auto;
+        max-width: 400px;
+    }
+}

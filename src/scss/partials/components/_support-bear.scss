@@ -1,0 +1,49 @@
+.c-support-bear {
+    position: relative;
+    width: 373px;
+    height: 439px;
+
+    margin-top: 110px;
+    margin-left: 90px;
+
+    background: url("../img/default/el-bear.png") no-repeat;
+    background-size: cover;
+
+    &.is-active {
+        .c-support-bear__text {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        width: 567px;
+        height: 225px;
+
+        margin: 0;
+        padding-top: 45px;
+
+        font-family: $font_primary;
+        font-size: 4.6rem;
+        font-weight: 700;
+
+        text-align: center;
+
+        line-height: 1;
+
+        color: $color_red;
+
+        background: url("../img/default/bg-cloud.png") no-repeat;
+        background-size: cover;
+
+        transform: translateX(-100px) scale(0);
+        transition: transform 300ms ease-in-out;
+
+        span {
+            color: $color_blue;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.l-projects {
+    position: relative;
+    z-index: 20;
+
+    height: 535px;
+
+    padding-top: 110px;
+    margin-top: -105px;
+
+    color: $color_gray_4;
+    background: url("../img/default/bg-other-projects.png") no-repeat 50% 0;
+
+    .c-el {
+        position: absolute;
+        top: -165px;
+        right: -365px;
+    }
+
+    &__content {
+        max-width: 670px;
+    }
+}
