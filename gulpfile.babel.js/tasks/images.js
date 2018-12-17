@@ -11,10 +11,10 @@ const paths = {
   dest: path.join(config.root.dest, config.tasks.images.dest)
 }
 
-var imagesTask = (env) => {
+const imagesTask = (env) => {
   return gulp.src([paths.src, '*!README.md'])
     .pipe(gulpif(!global.production, gulpChanged(paths.dest))) // Ignore unchanged files
-    // .pipe(gulpif(global.production, gulpImagemin())) // minify if it's production task
+    .pipe(gulpif(global.production, gulpImagemin())) // minify if it's production task
     .pipe(gulp.dest(path.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }

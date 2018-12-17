@@ -2,7 +2,7 @@ import path from 'path'
 import gulp from 'gulp'
 import config from '../config'
 
-var watchTask = () => {
+const watchTask = () => {
   const watchableTasks = ['css', 'html', 'images']
 
   watchableTasks.forEach((taskName) => {

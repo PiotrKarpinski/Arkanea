@@ -12,8 +12,5 @@ export default class ClassExample {
 
   init () {
     console.log(SCSS_VARIABLES.inner)
-    console.log(BREAKPOINTS.phone)
   }
 }
-
-console.log('le')
