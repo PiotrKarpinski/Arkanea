@@ -1,29 +1,43 @@
-# README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+> **Starter** starter for front-end projects
 
-### What is this repository for? ###
+## Code Formating
+**Standardjs**
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Requirements
+1. [node](https://nodejs.org/en/) & [npm](https://docs.npmjs.com/cli/install).
+2. SASS
+3. **gulp-cli** node package installed globally:
+`npm install -g gulp-cli`
 
-### How do I get set up? ###
+## [Installation](docs/install.md)
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```shell
+cd package_directory
+npm install
+```
 
-### Contribution guidelines ###
+## Usage
 
-* Writing tests
-* Code review
-* Other guidelines
+### Run development tasks:
 
-### Who do I talk to? ###
+```shell
+npm start
+```
 
-* Repo owner or admin
-* Other community or team contact
+Aliases: `gulp`
+
+
+### Build production files:
+
+```shell
+npm run production
+```
+
+Aliases: `gulp production`
+
+## Directory structure explanation
+
+* **/** - root directory with html files and configuration files (eslint, editorconfig)
+* **src** - directory with source files
+* **static** - directory compiled files, do not edit files in this directory because they will be overwritten
