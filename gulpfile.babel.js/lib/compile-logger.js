@@ -7,7 +7,7 @@ module.exports = (err, stats) => {
   if (err) throw new PluginError('webpack', err)
 
   if (stats.compilation.errors.length > 0) {
-    stats.compilation.errors.forEach(function (error) {
+    stats.compilation.errors.forEach((error) => {
       handleErrors(error)
     })
   } else {
