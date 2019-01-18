@@ -5,7 +5,6 @@ import data from 'gulp-data'
 import twig from 'gulp-twig'
 import fs from 'fs'
 import gulpif from 'gulp-if'
-import htmlmin from 'gulp-htmlmin'
 import config from '../config'
 import handleErrors from '../lib/handle-errors'
 
@@ -37,7 +36,6 @@ const htmlTask = () => {
     .on('error', handleErrors)
     .pipe(twig())
     .on('error', handleErrors)
-    .pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))
     .pipe(gulp.dest(path.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }

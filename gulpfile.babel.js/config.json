@@ -67,14 +67,13 @@
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
-    "svgsprites": {
-      "src": "svg",
-      "dest": ".",
-      "extensions": ["svg"]
+    "svgSprites": {
+      "src": "img/svg-sprites",
+      "dest": "img/"
     },
 
-    "production" : {
-      "rev": false
+    "rev" : {
+      "enabled": false
     },
 
     "critical" : {

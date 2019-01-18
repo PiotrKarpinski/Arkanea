@@ -5,23 +5,44 @@ import html from './tasks/html'
 import images from './tasks/images'
 import watch from './tasks/watch'
 import browserSync from './tasks/browser-sync'
-// import svgsprites from './tasks/svgsprites'
+import svgSprites from './tasks/svg-sprites'
+import fonts from './tasks/fonts'
+import rev from './tasks/rev'
+import critical from './tasks/critical'
 import webpackProduction from './tasks/webpack-production'
+import config from './config'
 
 global.production = false
 
+// Production task
 const prod = function () {
   if (global.process.argv.includes('production')) {
     global.production = true
   }
 
-  return [clean, html, css, images, webpackProduction]
+  let tasks = [clean, html, css, images, webpackProduction]
+
+  if (config.tasks.critical.enabled) {
+    tasks.push(critical)
+  }
+
+  if (config.tasks.rev.enabled) {
+    tasks.push(rev)
+  }
+
+  return tasks
 }
 
-const base = function () {
-  return [html, css, images, gulp.parallel(browserSync, watch)]
+// Dev task
+const dev = function () {
+  return [html, css, images, fonts, gulp.parallel(browserSync, watch)]
 }
 
-gulp.task('default', gulp.series(...base()))
+// Sprites task
+const sprites = function () {
+  return [svgSprites]
+}
+
+gulp.task('default', gulp.series(...dev()))
 gulp.task('production', gulp.series(...prod()))
-// gulp.task('svgsprites', gulp.series(svgsprites))
+gulp.task('svg-sprites', gulp.series(...sprites()))

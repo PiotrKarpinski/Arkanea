@@ -14,7 +14,7 @@ module.exports = (env) => {
     return '.' + extension
   })
 
-  const rev = config.tasks.production.rev && env === 'production'
+  const rev = config.tasks.rev.enabled && env === 'production'
   const filenamePattern = rev ? '[name]-[hash].js' : '[name].js'
 
   const webpackConfig = {

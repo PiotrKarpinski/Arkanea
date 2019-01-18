@@ -6,6 +6,7 @@ import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import combineMq from 'gulp-combine-mq'
 import gulpif from 'gulp-if'
+import handleErrors from '../lib/handle-errors'
 import config from '../config'
 
 const paths = {
@@ -13,9 +14,10 @@ const paths = {
   dest: path.join(config.root.dest, config.tasks.css.dest)
 }
 
-const cssTask = (cb) => {
+const cssTask = () => {
   return gulp.src(paths.src)
     .pipe(sass(config.tasks.css.sass))
+    .on('error', handleErrors)
     .pipe(combineMq({
       beautify: false
     }))

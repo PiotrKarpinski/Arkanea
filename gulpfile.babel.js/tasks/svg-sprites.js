@@ -11,12 +11,12 @@ const configSvg = {
 }
 
 const paths = {
-  src: path.join(config.root.src, config.tasks.svgsprites.src),
-  dest: path.join(config.root.dest, config.tasks.svgsprites.dest)
+  src: path.join(config.root.src, config.tasks.svgSprites.src),
+  dest: path.join(config.root.dest, config.tasks.svgSprites.dest)
 }
 
 const svgSpritesTask = (cb) => {
-  return gulp.src('**/*.' + config.tasks.svgsprites.extensions, {
+  return gulp.src('**/*.svg', {
     cwd: paths.src
   })
     .pipe(svgSprite(configSvg))
