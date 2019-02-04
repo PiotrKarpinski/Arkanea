@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="en" class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>{% block title %} {{ index.title }} {% endblock %}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        {% include "head/head-links.twig" %}
-    </head>
-    <body>
+{% extends "base.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
 ss
-        <script src="./static/js/app.js"></script>
-    </body>
-</html>
+{% endblock %}
