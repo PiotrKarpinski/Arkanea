@@ -7,58 +7,43 @@
     border: 0;
     background: none;
 
-    &__wrap {
-        @extend %display-flex;
-        @extend %align-items-center;
-        @extend %justify-content-center;
-    }
-
-    &__ico {
-        margin-left: 10px;
-
-        font-size: 0;
-
-        &:first-child {
-            margin-left: 0;
-            margin-right: 10px;
-        }
-    }
-
-    &__label {
-        transition: color $transition_speed ease-in-out;
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
     }
 }
 
-.c-btn {
-    &--normal {
-        .c-btn__label {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-        }
+.c-btn input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.c-btn__wrap {
+    @extend %display-flex;
+    @extend %align-items-center;
+    @extend %justify-content-center;
+
+    height: 100%;
+}
+
+.c-btn__ico {
+    font-size: 0;
+
+    &:first-child {
+        margin-left: 0;
     }
 }
 
-.c-btn {
-    &--default {
-        padding: 0 45px;
+.c-btn__ico {
+    margin-left: 1rem;
 
-        background: $color_white;
-        border-radius: 22px;
-        box-shadow: 0 6px 5.8px 0.2px rgba(0, 0, 0, 0.24);
-
-        .c-btn__wrap {
-            height: 44px;
-        }
-
-        .c-btn__label {
-            font-size: 2rem;
-        }
-
-        &:hover {
-            @include media(">=t") {
-                color: $color_red;
-            }
-        }
+    &:first-child {
+        margin-right: 1rem;
     }
 }
 
@@ -115,4 +100,8 @@
     top: 18px;
     width: 0%;
     left: 50%;
+}
+
+.c-link--alt {
+    font-size: 1.2rem;
 }

@@ -35,6 +35,10 @@
     display: none;
 }
 
+.u-show {
+    display: block;
+}
+
 /* Flexbox utilises
    ========================================================================== */
 .u-align-items-center {
@@ -72,6 +76,10 @@
 @each $name, $value in $breakpoints {
     @include media("<=#{$name}") {
         .u-hidden\@#{$name} {
+            display: none;
+        }
+
+        .u-show\@#{$name} {
             display: none;
         }
 
