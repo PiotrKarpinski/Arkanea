@@ -1,4 +1,3 @@
 {
-  "title": "Project Title",
-  "author": "Codee"
+    "static": "./static/"
 }
