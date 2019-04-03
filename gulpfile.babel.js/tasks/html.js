@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import path from 'path'
+import posix from 'path-posix'
 import browserSync from 'browser-sync'
 import data from 'gulp-data'
 import twig from 'gulp-twig'
@@ -8,16 +8,16 @@ import gulpif from 'gulp-if'
 import config from '../config'
 import handleErrors from '../lib/handle-errors'
 
-const exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
+const exclude = posix.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
 
 const paths = {
-  src: [path.join(config.root.src, config.tasks.html.src, '/*.{' + config.tasks.html.extensions + '}'), exclude],
-  dest: path.join('./')
+  src: [posix.join(config.root.src, config.tasks.html.src, '/*.{' + config.tasks.html.extensions + '}'), exclude],
+  dest: posix.join('./')
 }
 
 const getData = function (file) {
-  const dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.data)
-  const fileName = dataPath + '/' + path.basename(file.path, '.twig') + '.json'
+  const dataPath = posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.data)
+  const fileName = dataPath + '/' + posix.basename(file.path, '.twig') + '.json'
 
   if (fs.existsSync(fileName)) {
     return JSON.parse(fs.readFileSync(fileName, 'utf8'))
@@ -25,7 +25,7 @@ const getData = function (file) {
 }
 
 const getDataOne = function (file) {
-  const dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
+  const dataPath = posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
@@ -197,7 +197,7 @@ const htmlTask = () => {
       extend: twigExtends
     }))
     .on('error', handleErrors)
-    .pipe(gulp.dest(path.join(global.production ? config.root.dist : '', paths.dest)))
+    .pipe(gulp.dest(posix.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }
 
