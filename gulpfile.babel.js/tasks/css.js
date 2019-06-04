@@ -17,7 +17,7 @@ const cssTask = () => {
   return gulp.src(paths.src)
     .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)
-    .pipe(autoprefixer(config.tasks.css.autoprefixer))
+    .pipe(autoprefixer())
     .pipe(gulpif(global.production, cssnano({ autoprefixer: false })))
     .pipe(gulp.dest(posix.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
