@@ -20,7 +20,7 @@ const prod = function () {
     global.production = true
   }
 
-  let tasks = [clean, html, css, images, webpackProduction]
+  let tasks = [clean, html, css, images, fonts, svgSprites, webpackProduction]
 
   if (config.tasks.critical.enabled) {
     tasks.push(critical)
