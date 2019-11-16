@@ -4,7 +4,7 @@ import webpack from 'webpack'
 import webpackMultiConfig from '../webpack/base'
 import compileLogger from '../lib/compile-logger'
 
-const webpackProductionTask = (cb) => {
+const webpackProductionTask = cb => {
   webpack(webpackMultiConfig('production'), (err, stats) => {
     compileLogger(err, stats)
     cb()

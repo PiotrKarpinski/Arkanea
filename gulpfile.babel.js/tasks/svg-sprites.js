@@ -15,7 +15,7 @@ const paths = {
   dest: posix.join(config.root.dest, config.tasks.svgSprites.dest)
 }
 
-const svgSpritesTask = (cb) => {
+const svgSpritesTask = cb => {
   return gulp.src('**/*.svg', {
     cwd: paths.src
   })

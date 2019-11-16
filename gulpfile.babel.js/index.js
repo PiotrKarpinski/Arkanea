@@ -2,6 +2,7 @@ import gulp from 'gulp'
 import clean from './tasks/clean'
 import css from './tasks/css'
 import html from './tasks/html'
+import revUpdateHTML from './tasks/rev-update-html'
 import images from './tasks/images'
 import watch from './tasks/watch'
 import browserSync from './tasks/browser-sync'
@@ -28,6 +29,7 @@ const prod = function () {
 
   if (config.tasks.rev.enabled) {
     tasks.push(rev)
+    tasks.push(revUpdateHTML)
   }
 
   return tasks

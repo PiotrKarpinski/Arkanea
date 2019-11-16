@@ -49,7 +49,7 @@
         "collapseWhitespace": true
       },
       "extensions": ["html", "json", "twig"],
-      "excludeFolders": ["layouts", "partials", "macros", "data", "components"]
+      "excludeFolders": ["layouts", "partials", "data", "components"]
     },
 
     "images": {
@@ -70,7 +70,7 @@
     },
 
     "rev" : {
-      "enabled": false
+      "enabled": true
     },
 
     "critical" : {

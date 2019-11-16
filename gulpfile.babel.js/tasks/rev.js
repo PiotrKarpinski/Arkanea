@@ -9,7 +9,7 @@ const paths = {
 }
 
 const rev = () => {
-  return gulp.src([posix.join(paths.desc, '/**/*.css')])
+  return gulp.src([posix.join(paths.desc, '/**/*.+(css|jpg|png|gif|svg)')])
     .pipe(gulpRev())
     .pipe(gulpRevDel())
     .pipe(gulp.dest(paths.desc))
