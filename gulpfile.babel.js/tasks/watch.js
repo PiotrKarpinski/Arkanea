@@ -1,4 +1,4 @@
-import posix from 'path-posix'
+import path from 'path'
 import gulp from 'gulp'
 import config from '../config'
 
@@ -8,7 +8,7 @@ const watchTask = () => {
   watchableTasks.forEach(taskName => {
     const task = config.tasks[taskName]
     if (task) {
-      let glob = posix.join(config.root.src, task.src, '**/*.{' + task.extensions.join(',') + '}')
+      let glob = path.posix.join(config.root.src, task.src, '**/*.{' + task.extensions.join(',') + '}')
       gulp.watch(glob, gulp.parallel(taskName))
     }
   })

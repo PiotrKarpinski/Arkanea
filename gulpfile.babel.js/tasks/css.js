@@ -1,6 +1,6 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
-import posix from 'path-posix'
+import path from 'path'
 import cssnano from 'gulp-cssnano'
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
@@ -9,8 +9,8 @@ import handleErrors from '../lib/handle-errors'
 import config from '../config'
 
 const paths = {
-  src: posix.join(config.root.src, config.tasks.css.src, '/**/main.{' + config.tasks.css.extensions + '}'),
-  dest: posix.join(config.root.dest, config.tasks.css.dest)
+  src: path.posix.join(config.root.src, config.tasks.css.src, '/**/main.{' + config.tasks.css.extensions + '}'),
+  dest: path.posix.join(config.root.dest, config.tasks.css.dest)
 }
 
 const cssTask = () => {
@@ -19,7 +19,7 @@ const cssTask = () => {
     .on('error', handleErrors)
     .pipe(autoprefixer())
     .pipe(gulpif(global.production, cssnano({ autoprefixer: false })))
-    .pipe(gulp.dest(posix.join(global.production ? config.root.dist : '', paths.dest)))
+    .pipe(gulp.dest(path.posix.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }
 

@@ -1,10 +1,10 @@
 import gulp from 'gulp'
-import posix from 'path-posix'
+import path from 'path'
 import critical from 'critical'
 import config from '../config'
 
 const paths = {
-  src: posix.join(config.root.dist, config.tasks.critical.src),
+  src: path.posix.join(config.root.dist, config.tasks.critical.src),
   dest: config.root.dist
 }
 

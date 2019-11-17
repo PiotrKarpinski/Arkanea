@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import posix from 'path-posix'
+import path from 'path'
 import browserSync from 'browser-sync'
 import data from 'gulp-data'
 import twig from 'gulp-twig'
@@ -8,16 +8,16 @@ import gulpif from 'gulp-if'
 import config from '../config'
 import handleErrors from '../lib/handle-errors'
 
-const exclude = posix.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
+const exclude = path.posix.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
 
 const paths = {
-  src: [posix.join(config.root.src, config.tasks.html.src, '/*.{' + config.tasks.html.extensions + '}'), exclude],
-  dest: posix.join('./')
+  src: [path.posix.join(config.root.src, config.tasks.html.src, '/*.{' + config.tasks.html.extensions + '}'), exclude],
+  dest: path.posix.join('./')
 }
 
 const getData = function (file) {
-  const dataPath = posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.data)
-  const fileName = dataPath + '/' + posix.basename(file.path, '.twig') + '.json'
+  const dataPath = path.posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.data)
+  const fileName = dataPath + '/' + path.posix.basename(file.path, '.twig') + '.json'
 
   if (fs.existsSync(fileName)) {
     return JSON.parse(fs.readFileSync(fileName, 'utf8'))
@@ -25,7 +25,7 @@ const getData = function (file) {
 }
 
 const getDataOne = function (file) {
-  const dataPath = posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
+  const dataPath = path.posix.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
@@ -197,7 +197,7 @@ const htmlTask = () => {
       extend: twigExtends
     }))
     .on('error', handleErrors)
-    .pipe(gulp.dest(posix.join(global.production ? config.root.dist : '', paths.dest)))
+    .pipe(gulp.dest(path.posix.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }
 
