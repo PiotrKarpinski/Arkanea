@@ -70,7 +70,7 @@
     },
 
     "rev" : {
-      "enabled": true
+      "enabled": false
     },
 
     "critical" : {

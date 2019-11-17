@@ -7,7 +7,7 @@ import webpackMultiConfig from '../webpack/base'
 import pathToUrl from '../lib/path-to-url'
 import config from '../config'
 
-const browserSyncTask = () => {
+const browserSyncTask = cb => {
   const webpackConfig = webpackMultiConfig('development')
   const compiler = webpack(webpackConfig)
   const proxyConfig = config.tasks.browserSync.proxy || null
@@ -31,6 +31,8 @@ const browserSyncTask = () => {
   ]
 
   browserSync.init(config.tasks.browserSync)
+
+  cb()
 }
 
 gulp.task('browserSync', browserSyncTask)

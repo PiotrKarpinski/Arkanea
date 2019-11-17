@@ -2,7 +2,7 @@ import path from 'path'
 import gulp from 'gulp'
 import config from '../config'
 
-const watchTask = () => {
+const watchTask = cb => {
   const watchableTasks = ['css', 'html', 'images', 'fonts']
 
   watchableTasks.forEach(taskName => {
@@ -12,6 +12,8 @@ const watchTask = () => {
       gulp.watch(glob, gulp.parallel(taskName))
     }
   })
+
+  cb()
 }
 
 gulp.task('watch', watchTask)

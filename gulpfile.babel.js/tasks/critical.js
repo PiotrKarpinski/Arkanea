@@ -18,10 +18,12 @@ const criticalConfig = {
   ignore: ['font-face']
 }
 
-const criticalTask = function (cb) {
+const criticalTask = cb => {
   return gulp.src(paths.src)
     .pipe(critical.stream(criticalConfig))
     .pipe(gulp.dest(paths.dest))
+
+  cb()
 }
 
 gulp.task('critical', criticalTask)
