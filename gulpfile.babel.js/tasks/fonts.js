@@ -1,8 +1,8 @@
 import gulp from 'gulp'
-import path from 'path'
-import browserSync from 'browser-sync'
 import gulpif from 'gulp-if'
 import gulpChanged from 'gulp-changed'
+import path from 'path'
+import browserSync from 'browser-sync'
 import config from '../config'
 
 const paths = {

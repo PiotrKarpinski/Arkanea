@@ -1,6 +1,6 @@
 import gulp from 'gulp'
-import path from 'path'
 import svgSprite from 'gulp-svg-sprite'
+import path from 'path'
 import config from '../config'
 
 const configSvg = {

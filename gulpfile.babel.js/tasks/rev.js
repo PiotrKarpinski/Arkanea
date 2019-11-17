@@ -1,7 +1,7 @@
 import gulp from 'gulp'
-import path from 'path'
 import gulpRev from 'gulp-rev'
 import gulpRevDel from 'gulp-rev-delete-original'
+import path from 'path'
 import config from '../config'
 
 const paths = {

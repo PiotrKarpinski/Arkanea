@@ -1,9 +1,9 @@
 import gulp from 'gulp'
-import browserSync from 'browser-sync'
-import path from 'path'
 import gulpif from 'gulp-if'
 import gulpChanged from 'gulp-changed'
 import gulpImagemin from 'gulp-imagemin'
+import browserSync from 'browser-sync'
+import path from 'path'
 import config from '../config'
 
 const paths = {

@@ -1,7 +1,7 @@
 import gulp from 'gulp'
+import revRewrite from 'gulp-rev-rewrite'
 import config from '../config'
 import path from 'path'
-import revRewrite from 'gulp-rev-rewrite'
 
 // 5) Update asset references in HTML
 const revUpdateHTMLTask = () => {
