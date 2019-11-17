@@ -53,13 +53,6 @@
     "normalize.css": "^8.0.1"
   },
   "standard": {
-    "globals": [
-      "$",
-      "jQuery",
-      "fetch",
-      "history",
-      "location"
-    ],
     "ignore": [
       "src/js/vendor/*.js"
     ]
