@@ -1,7 +1,8 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
 import path from 'path'
-import cssnano from 'gulp-cssnano'
+import postcss from 'gulp-postcss'
+import cssnano from 'cssnano'
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import gulpif from 'gulp-if'
@@ -18,7 +19,9 @@ const cssTask = () => {
     .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)
     .pipe(autoprefixer())
-    .pipe(gulpif(global.production, cssnano({ autoprefixer: false })))
+    .pipe(gulpif(global.production, postcss([
+      cssnano()
+    ])))
     .pipe(gulp.dest(path.posix.join(global.production ? config.root.dist : '', paths.dest)))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }
