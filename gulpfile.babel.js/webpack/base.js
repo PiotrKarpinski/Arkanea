@@ -45,8 +45,6 @@ module.exports = env => {
 
   webpackConfig.optimization = {
     minimizer: [new TerserPlugin({
-      cache: true,
-      parallel: true,
       sourceMap: false
     })]
   }

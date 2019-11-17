@@ -1,7 +1,7 @@
 import log from 'fancy-log'
 import chalk from 'chalk'
 import PluginError from 'plugin-error'
-import handleErrors from './handle-errors'
+import handleErrors from '../lib/handle-errors'
 
 module.exports = (err, stats) => {
   if (err) throw new PluginError('webpack', err)
