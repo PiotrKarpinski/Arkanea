@@ -3,7 +3,6 @@ import revRewrite from 'gulp-rev-rewrite'
 import config from '../config'
 import path from 'path'
 
-// 5) Update asset references in HTML
 const revUpdateHTMLTask = () => {
   var finalPath = path.join(global.production ? config.root.dist : '', config.root.dest)
   var manifest = gulp.src(path.join(finalPath, 'manifest.json'))
