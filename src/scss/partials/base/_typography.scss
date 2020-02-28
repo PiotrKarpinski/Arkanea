@@ -36,3 +36,65 @@ a {
         }
     }
 }
+
+/* Header 
+    =========================================================================== */
+
+.t-header-title {
+    margin: 0 auto;
+
+    color: $color-white;
+
+    font-size: 5rem;
+}
+
+.t-header-subtitle {
+    color: $color-white;
+
+    font-size: 2rem;
+
+    width: 60%;
+}
+
+.t-bold {
+    font-weight: bolder;
+}
+
+.t-portfolio-title {
+    font-size: $gutter*1.5;
+    margin-top: $gutter*4;
+    margin-left: $gutter*10;
+}
+
+.t-portfolio-title::after {
+    content:'';
+    display:block;
+    width:3%; height:100%;
+    margin-top: 2rem;
+    margin-right:-100%;
+    border-bottom:1px solid #000;
+}
+
+.t-caption-text {
+    color: $color-gray;
+    font-size: $gutter;
+}
+
+.t-quote-text {
+    text-align: center;
+    color: $color-white;
+
+}
+
+.t-quote-author {
+    font-weight: bold;
+    text-align: center;
+    color: $color-white;
+    
+}
+
+.t-contact-title {
+    margin-left: $gutter*10;
+    color: $color-gray;
+    margin-top: $gutter*6;
+}

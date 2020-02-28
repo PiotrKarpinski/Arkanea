@@ -1,1 +1,24 @@
+.c-nav {
+	display: flex;
+	justify-content: flex-start;
+	margin: auto $gutter*10;
+	padding-top: $gutter*8;
+}
 
+
+.c-nav ul {
+	width: 60%;
+
+	li {
+		margin-right: $gutter*2;
+
+		font-size: $gutter;
+		list-style-type: none;
+
+	 	a {
+		 	font-family: $font-normal;
+			margin-right: 12px; 
+			color: $color-white;
+		}
+	}
+}

@@ -39,11 +39,10 @@
     transform: translate3d(0, 0, 0);
 }
 
-.slick-track {
+.tns-nav button{
     position: relative;
     left: 0;
     top: 0;
-    display: block;
 
     &:before,
     &:after {
@@ -100,4 +99,5 @@
 .slick-disabled {
     display: none!important;
 }
+
 

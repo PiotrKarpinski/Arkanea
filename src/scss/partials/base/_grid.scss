@@ -1,6 +1,9 @@
 .l-grid-wrapper {
-    width: 100%;
+    flex-flow: row;
+    margin:auto $gutter*10;
+    justify-content: space-between;
 }
+
 
 .l-grid {
     @extend %display-flex;
@@ -11,6 +14,7 @@
 
 @for $i from 1 through 12 {
     .l-grid__item-#{$i} {
+        margin: 0;
         width: 100% / 12 * $i;
     }
 }

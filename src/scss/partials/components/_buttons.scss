@@ -13,6 +13,16 @@
     }
 }
 
+button[type="submit"] {
+    padding: 16px;
+    margin-left: 16px;
+
+    border-radius: 4px;
+
+    color: $color-white;
+    background-color: red;
+}
+
 .c-btn input[type="file"] {
     opacity: 0;
     width: 100%;

@@ -1,3 +1,11 @@
 .c-logo {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: auto auto;
 
+	color: $color-white;
+
+	font-family: $font-logo;
+	font-size: $gutter;
 }
