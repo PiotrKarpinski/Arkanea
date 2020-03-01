@@ -76,17 +76,20 @@ a {
 }
 
 .t-caption-text {
+
     color: $color-gray;
     font-size: $gutter;
 }
 
 .t-quote-text {
+
     text-align: center;
     color: $color-white;
 
 }
 
 .t-quote-author {
+
     font-weight: bold;
     text-align: center;
     color: $color-white;
@@ -94,7 +97,19 @@ a {
 }
 
 .t-contact-title {
-    margin-left: $gutter*10;
-    color: $color-gray;
     margin-top: $gutter*6;
+
+    text-align: center;    
+    color: $color-gray;
+
 }
+
+.t-footer-text {
+    text-align: left;
+    color: $color-white;
+}
+
+.t-footer-icon {
+    color: pink;
+}
+

@@ -20,11 +20,14 @@ $scotch-colors: (
 
 /* Fonts
 ========================================================================== */
-$font_raleway:        'Raleway';
+$font_logo:           'Orbitron', ;
 
-$font_logo:           'Raleway';
 
-$font_normal:          $font_raleway, Arial, sans-serif;
+$font_normal:         'Source Sans Pro', ;
+
+
+$font_normal_bold:    'Source Sans Pro', bold 700;
+
 
 /* Animations
 ========================================================================== */

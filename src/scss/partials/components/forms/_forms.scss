@@ -1,9 +1,21 @@
 .f-contact-layout {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	vertical-align: middle;
+	align-content: space-around;
+	flex-flow: row-wrap;
 
-	width: 30%;
-
-
-	input {
+	input,textarea,button {
+		margin: 12px;
+		margin-left: 0;
+		padding: 12px;
 		display: block;
 	}
+
+	h4 {
+		font-size: 1.5rem;
+
+	}
+
+
 }
