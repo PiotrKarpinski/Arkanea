@@ -1,5 +1,4 @@
-.f-field {
-}
+
  .f-field--email {
  	width: 40%;
  	padding: 16px;
@@ -9,4 +8,12 @@
 
  	border-radius: 4px;
  	border: none;
+ }
+
+
+ @media(max-width: 460px) {
+ 	 .f-field--email {
+ 	width: 80%;
+ 	margin-bottom: $gutter;
+ }
  }

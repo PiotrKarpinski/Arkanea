@@ -5,15 +5,20 @@
 .l-inner {
     position: relative;
     max-width: $size_inner;
-    width: 40%;
+    width: auto;
     margin-left: 0;
     margin-right: auto;
     padding-right: $gutter;
 }
 
+
+
+
+
 /* Page
    ========================================================================== */
 .l-page {
+  background-color: $color-white;
     overflow: hidden;
 }
 
@@ -103,7 +108,7 @@
 
 
 .l-contact-list {
-  margin-right: 0;
+  margin: 0 0 auto auto;
   list-style-type: none;
   text-align: right;
 
@@ -131,3 +136,23 @@
     width: 100%;
   }
 
+@media(max-width: 1300px) {
+  .l-inner{
+    display: none;
+  }
+
+  .l-header-title {
+    width: auto;
+  }
+  
+}
+
+@media(max-width: 860px) {
+
+  .l-footer {
+
+  }
+  .l-header-title {
+    margin: auto $gutter*2;
+  }
+}

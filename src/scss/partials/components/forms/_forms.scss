@@ -10,6 +10,8 @@
 		margin-left: 0;
 		padding: 12px;
 		display: block;
+		border: none;
+		border-radius: 2px;
 	}
 
 	h4 {
@@ -18,4 +20,18 @@
 	}
 
 
+}
+
+@media (max-width: 1335px) {
+	.f-contact-layout {
+		input,textarea, button {
+			font-size: $gutter*0.5;
+		}
+	}
+}
+
+@media (max-width: 1035px) {
+	.f-contact-layout {
+		width: 100%;
+	}
 }

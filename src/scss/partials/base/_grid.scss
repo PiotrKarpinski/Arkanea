@@ -2,6 +2,7 @@
     flex-flow: row;
     margin:auto $gutter*10;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -28,4 +29,45 @@
             }
         }
     }
+}
+
+@media (max-width: 1335px) {
+    .l-grid__item-3 {
+        width: 70%;
+        margin: $gutter*2 auto;
+        img {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 1035px) {
+
+
+
+    .l-grid__item-6 {
+
+        .l-contact-list {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+    }
+}
+
+@media(max-width: 860px) {
+
+    .l-grid-wrapper {
+        margin: auto $gutter*2;
+
+    .l-grid__item-6 {
+
+        width: 100%;
+
+    }
+
+    }
+
+
 }

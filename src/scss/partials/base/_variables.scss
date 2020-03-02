@@ -1,10 +1,11 @@
 
 /* Colors
 ========================================================================== */
-$color_white:       #fff;
-$color_black:       #000000;
-$color_gray:        #272727;
-$color_red:         #dc4e58;
+$color_white:       #FBFBF6;
+$color_black:       #24242E;
+$color_gray:        #A0A6A9;
+$color_red:         #E85555;
+$color_pink:        #E855BB;
 
 $scotch-colors: (
     'black': (
@@ -15,7 +16,14 @@ $scotch-colors: (
     ),
     'gray': (
         $color_gray
+    ),
+    'red': (
+        $color_red
+    ),
+    'pink': (
+        $color_pink
     )
+
 );
 
 /* Fonts
@@ -26,7 +34,7 @@ $font_logo:           'Orbitron', ;
 $font_normal:         'Source Sans Pro', ;
 
 
-$font_normal_bold:    'Source Sans Pro', bold 700;
+$font_normal_bold:    'Source Sans Pro', ;
 
 
 /* Animations

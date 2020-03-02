@@ -8,10 +8,10 @@
 
 
 .c-nav ul {
-	width: 70%;
+	width: auto;
 
 	li {
-		margin-right: $gutter*2;
+		margin-right: $gutter;
 
 		font-size: $gutter;
 		list-style-type: none;
@@ -41,3 +41,27 @@
 
 }
 
+
+@media(max-width: 1300px) {
+	.c-nav ul li a {
+		font-size: $gutter;
+	}
+}
+
+@media(max-width: 1200px) {
+	.c-nav {
+		padding: $gutter $gutter*0.5;
+	}
+}
+
+@media(max-width: 800px) {
+	.c-nav ul li {
+
+		margin-right: 0;
+
+		a {
+			font-size: $gutter*0.5;
+		}
+
+	}
+}

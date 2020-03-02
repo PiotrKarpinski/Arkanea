@@ -44,20 +44,22 @@ a {
     margin: 0 auto;
 
     color: $color-white;
-
+    font-family: $font_normal_bold;
     font-size: 5rem;
 }
 
 .t-header-subtitle {
     color: $color-white;
 
+    font-weight: 200;
+    font-family: $font_normal;
     font-size: 2rem;
 
     width: 60%;
 }
 
 .t-bold {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .t-portfolio-title {
@@ -105,11 +107,39 @@ a {
 }
 
 .t-footer-text {
-    text-align: left;
+    text-align: right;
     color: $color-white;
 }
 
 .t-footer-icon {
-    color: pink;
+    color: $color-pink;
 }
 
+@media (max-width: 1035px) {
+    .t-footer-text {
+        font-size: $gutter*0.5;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .t-footer-text {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .t-header-title {
+
+    font-size: 2.5rem;
+}
+
+.t-header-subtitle {
+
+    font-size: 1rem;
+
+}
+
+}
